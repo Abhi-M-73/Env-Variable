@@ -1,12 +1,18 @@
+import React from 'react'
 
-import React from "react";
+const App = () => {
 
-function App() {
+  const handleClick = (msg)=>{
+    console.log(msg);
+  }
+
+  // const wrapper = () => handleClick("Clicked");
+
   return (
-    <div className="flex justify-center items-center min-h-screen w-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">ChatGpt Key : {import.meta.env.VITE_CHAPGPT_KEY}</h1>
+    <div className='w-[80%] mx-auto p-10 mt-10 bg-gray-200'>
+      <button className='px-6 py-2 bg-indigo-900 text-white rounded' onClick={() => handleClick("Clicked")}>Click Me</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
